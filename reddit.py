@@ -1,11 +1,8 @@
-pip install praw
 import praw
 import pandas as pd
-reddit = praw.Reddit(client_id="",
-                     client_secret="",
-                     user_agent="my user agent",
-                     username = "",
-                     password = "")
+reddit = praw.Reddit(client_id="buyo6b-krGWIJ3qm4oJZcg",
+                     client_secret="FaRa2WxWVxwgeBkwDL0xzl-vRosC0g",
+                     user_agent="my user agent",)
 sub = ['Askreddit']
 for s in sub:
     subreddit = reddit.subreddit(s)
