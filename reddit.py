@@ -19,6 +19,19 @@ class REDDIT:
         else:
             return False
 
+    from playwright.sync_api import sync_playwright
+    from bs4 import BeautifulSoup
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False, slow_mo=50)
+        page = browser.new_page()
+        page.goto('https://www.reddit.com/')
+        page.fill('input#imput-username', 'demo')
+        page.fill('input#imput-password', 'demo')
+        page.click('button[type=submit]')
+        page.inner_html('#content')
+        print(html)
+
     def main(self):
         while True:
             sub = ['Yatirim']
@@ -40,6 +53,13 @@ class REDDIT:
 
                     if self.duplicate_control(data) == False:
                         self.mycol.insert_one(data)
+
+
+dateparser.parse
+import dateparser
+dateparser.parse('12/12/12')
+datetime.datetime(2012, 12, 12, 0, 0)
+
 
 if __name__ == "__main__":
     red = REDDIT()
