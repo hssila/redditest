@@ -55,11 +55,6 @@ class REDDIT:
                         self.mycol.insert_one(data)
 
 
-dateparser.parse
-import dateparser
-dateparser.parse('12/12/12')
-datetime.datetime(2012, 12, 12, 0, 0)
-
 
 if __name__ == "__main__":
     red = REDDIT()
